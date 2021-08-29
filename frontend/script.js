@@ -71,11 +71,12 @@ const rollBg = () => {
 const submit = () => {
     const en = document.getElementById("en").value;
     const bg = document.getElementById("bg").value;
+    clear()
     request ("compare", "POST", (res) =>{
         if(res.length > 0){
-            document.getElementById("result").innerHTML="Vqrno"
+            document.getElementById("result").innerHTML="Вярно"
         }else{
-            document.getElementById("result").innerHTML="Greshno"
+            document.getElementById("result").innerHTML="Грешно"
         }
     },{
         BG: bg,
